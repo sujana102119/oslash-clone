@@ -6,7 +6,7 @@
  import { DynamoDBClient, GetItemCommand } from "@aws-sdk/client-dynamodb"; 
 import { randomUUID } from "crypto";
  
- const client = new DynamoDBClient({region: 'ap-south-1', credentials: {accessKeyId: 'AKIASPPGZ4UYZU762EAD', secretAccessKey: '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'}});
+ const client = new DynamoDBClient({region: 'ap-south-1', credentials: {accessKeyId: process.env.AWS_ACCESSKEYID, secretAccessKey: process.env.AWS_SECRETACCESSKEY}});
 
 /**
  * In-Memory Store
